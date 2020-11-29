@@ -4,7 +4,8 @@ It will read the weatherAUS.csv file and will call the Flask app /predict method
 import pandas as pd
 import requests
 
-FLASK_SERVICE_URL = "http://localhost:9696/predict"
+#FLASK_SERVICE_URL = "http://localhost:9696/predict"
+FLASK_SERVICE_URL = "https://manning-rain-predict.herokuapp.com/predict"
 
 def main():
     """Read Weather file, select records call flask app"""
