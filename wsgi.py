@@ -1,3 +1,3 @@
-from predict_flask import predictapp
+from predict_flask import app
 if __name__=='__main__':
-   predictapp.run()
+   app.run()
