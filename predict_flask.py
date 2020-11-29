@@ -8,7 +8,6 @@ import json
 # Create flask app to receive json data and make rain predictions
 app = Flask('predictapp')
 
-@app.route('/')
 @app.route('/predict', methods=['POST'])
 def predict():
     """Given list of json records, clean and predict whether it will rain"""
@@ -17,6 +16,11 @@ def predict():
     predictions = ml_model.predict_rain(json_data)
     # Return {'predictions':...,'probability':...} json
     return predictions
+
+@app.route('/hello', methods=['GET'])
+def hello():
+    """Hello World ping"""
+    return "Hello World!"
 
 # Uncomment if running locally
 # Comment if running in heroku
