@@ -6,7 +6,7 @@ import pandas as pd
 import json
 
 # Create flask app to receive json data and make rain predictions
-app = Flask('predicteapp')
+app = Flask('predictapp')
 
 @app.route('/')
 @app.route('/predict', methods=['POST'])
@@ -18,5 +18,7 @@ def predict():
     # Return {'predictions':...,'probability':...} json
     return predictions
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=9696)
+# Uncomment if running locally
+# Comment if running in heroku
+# if __name__ == '__main__':
+#     app.run(debug=True, host='0.0.0.0', port=9696)
